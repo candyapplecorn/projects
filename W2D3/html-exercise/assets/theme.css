@@ -1,0 +1,41 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: url(tim-wright-272034.jpg);
+  background-size: cover
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.ingredients-list {
+  list-style: square inside;
+}
+
+ol li {
+  list-style: decimal inside;
+}
+
+header > img {
+  width: 100px;
+}
+
+ul > li > a {
+  text-decoration: none;
+  color: inherit
+}
+
+.user_review > h4 {
+  font-family: fantasy;
+  font-size: 2em;
+  color: red;
+}
+
+.user_review > p {
+  font-family: cursive;
+
+}
