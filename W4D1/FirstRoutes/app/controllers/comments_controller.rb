@@ -9,8 +9,18 @@ class CommentsController < ApplicationController
 	end
 
 	def index 
-		@comments = Comment.all
-		render json: @comments, status: 200
+		if comment_params[:user_id]
+			@user = User.find(comment_params[:user_id])
+			@comments = @user.comments
+			render json: @comments, status: 200
+		elsif comment_params[:artwork_id]
+			@artwork = Artwork.find(comment_params[:artwork_id])
+			@comments = @artwork.comments
+			render json: @comments, status: 200
+		else
+			@comments = Comment.all
+			render json: @comments, status: 200
+		end
 	end
 
 	def create
@@ -42,6 +52,6 @@ class CommentsController < ApplicationController
 
 	private
 	def comment_params
-		params.require(:comment).permit(:author_id, :artwork_id, :body)
+		params.require(:comment).permit(:author_id, :artwork_id, :body, :user_id)
 	end
 end
