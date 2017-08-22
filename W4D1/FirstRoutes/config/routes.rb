@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 	#delete  '/artwork_shares/:id', 	to: 'artworks#destroy'
 
 	get '/users/:user_id/artworks', to: 'artworks#index'#, as: 'artworks'
+
+	resources :comments
 end
