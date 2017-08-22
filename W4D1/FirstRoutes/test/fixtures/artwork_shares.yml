@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  viewer_id: 1
+  artwork_id: 1
+  references: 
+  references: 
+
+two:
+  viewer_id: 1
+  artwork_id: 1
+  references: 
+  references: 
