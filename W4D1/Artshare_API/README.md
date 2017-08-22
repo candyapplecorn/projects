@@ -1,24 +1,9 @@
-# README
+# ARTSHARE API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I finished all the non-bonus material. I got everything up to and including search. 
 
-Things you may want to cover:
+Took all day.
 
-* Ruby version
+I'm a gladiator.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I feel like I know a lot more about rails now.
