@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
 	def index
-		@users = User.all
-		render json: @users
-		#render plain: "I'm the index action!"
-		#render User.all
+		if params[:query].nil?
+			@users = User.all
+			render json: @users
+		else
+			@users = User.where("username LIKE :search", search: "%#{params[:query]}%")
+			render json: @users
+		end
 	end
 
 	def create
@@ -44,6 +47,6 @@ class UsersController < ApplicationController
 
 	private
 	def user_params
-		params.require(:user).permit(:username)
+		params.require(:user).permit(:username, :query)
 	end
 end
