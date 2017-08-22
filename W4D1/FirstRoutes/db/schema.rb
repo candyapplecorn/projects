@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170822021326) do
+ActiveRecord::Schema.define(version: 20170822034104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,4 @@ ActiveRecord::Schema.define(version: 20170822021326) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "artwork_shares", "artworks"
-  add_foreign_key "artwork_shares", "users", column: "viewer_id"
 end
