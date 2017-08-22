@@ -1,0 +1,3 @@
+  function lmg() {
+    atom "db/migrate/"`ls -lth db/migrate/ | sed -n 'n; p; q' | awk '{ print $8 }'`
+  }
