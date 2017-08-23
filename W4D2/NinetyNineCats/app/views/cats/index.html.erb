@@ -1,0 +1,5 @@
+<% @cats.each do |cat|%>
+  <%= render 'shared/cat', cat: cat %>
+  <%= link_to "View #{cat.name}", cat_url(cat) %>
+  <hr>
+<% end %>
