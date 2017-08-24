@@ -1,0 +1,125 @@
+.main-nav {
+	display: flex;
+	justify-content: space-between;
+
+	margin: 10px 0px;
+	padding: 0px;
+
+	li {
+		margin-left: 5px;
+	}
+
+	button {
+		font-size: 16px;
+	}
+}
+
+.left-nav > ul {
+	display: flex;
+
+	li {
+		button {
+			background-color: white;
+			color: black;
+		}
+
+		:hover {
+			background-color: $light-gray;
+		}
+	}
+
+}
+.right-nav > ul {
+	display: flex;
+	justify-content: space-around;
+}
+.right-nav {
+	display: flex;
+
+	li {
+		:hover {
+			background: $light-blue;
+		}
+	}
+}
+
+.left-nav > ul > li {
+}
+
+.right-nav > ul > li {
+}
+
+.right-nav > ul > li:last-of-type {
+	button {
+		background: white;
+		color: black;
+	}
+	button:hover {
+		background: $light-gray;
+	}
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+}
+
+//
+// .left-nav {
+// 	display: inline-block;
+// 	li {
+// 		float: left;
+//     padding: 10px;
+// 	}
+// 	span {
+// 		background: white;
+// 		color: black;
+// 	}
+// 	span:hover {
+// 		background: $lightest-gray
+// 	}
+//   i {
+//     font-size: 20px;
+//   }
+// }
+//
+// .right-nav {
+// 	display: flex;
+// 	justify-content: flex-end;
+//
+//    ul li {
+// 	   display: inline-block;
+// 		 padding: 5px 5px;
+// 		 margin: 0px;
+// 		 background: red;
+//    }
+//    button {
+//      margin: 0px;
+// 		 padding: 5px 10px;
+//      font-size: 16px;
+//    }
+//    button:hover {
+//      background-color: $light-blue;
+//    }
+//    li:last-child button {
+//      background-color: transparent;
+// 		 color: black;
+// 		 font-size: 24px;
+// 		 margin: 0px;
+// 		 height: 30px;
+// 		 line-height: 30px;
+// 		 white-space: nowrap;
+// 		 text-align: center;
+//    }
+//    li:last-child button:hover {
+//      background-color: $lightest-gray;
+//    }
+// }
