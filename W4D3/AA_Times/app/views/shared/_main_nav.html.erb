@@ -3,11 +3,11 @@
 		<ul>
 			<li id="sections-sidebar-btn">
 				<i class="fa fa-bars"></i>
-				<span>sections</span>
+				<button>sections</button>
 			</li>
 			<li id="search-modal-btn">
 				<i class="fa fa-search"></i>
-				<span>search</span>
+				<button>search</button>
 			</li>
 		</ul>
 	</nav>
@@ -16,7 +16,13 @@
 		<ul>
 			<li><button type="button" name="subscribe">SUBSCRIBE NOW</button></li>
 			<li><button type="button" name="login">LOG IN</button></li>
-			<li><button type="button" name="settings"><i class="fa fa-cog" aria-hidden="true"></i></button></li>
+			<li id="gear-dropdown-btn">
+				<button  type="button" name="settings">
+				<i class="fa fa-cog" aria-hidden="true"></i>
+				</button>
+
+				<%= render partial: 'shared/gear_dropdown' %>
+			</li>
 		</ul>
 	</nav>
 </header>

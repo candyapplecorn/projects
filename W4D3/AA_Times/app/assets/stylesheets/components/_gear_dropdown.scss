@@ -1,1 +1,76 @@
 // Use the gear_dropdown.png screenshot as a style guide
+
+.gear-dropdown-btn {
+  position: relative;
+}
+
+.gear-dropdown, #gear-dropdown {
+
+  background-color: white;
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  background-color: white;
+  border-radius: 3px;
+  width: 33%;
+  border: 1px solid $light-gray;
+
+  :hover {
+    background-color: white;
+  }
+
+  color: $gray;
+
+  font-size: 12px;
+  padding: 20px 0px;
+  margin: 0px;
+
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+  z-index: 1;
+
+  button, span {
+    padding: inherit;
+    margin: inherit;
+    font-weight: bold;
+    font-size: 12px;
+    border: none;
+    border-color: none;
+    background-color: inherit;
+    color: inherit;
+    position: relative;
+  }
+
+  li, button, span {
+    margin: 5px 5px 0px 5px;
+    padding: 5px 5px 0px 5px;
+    font-size: 16px;
+  }
+
+  li:first-child {
+    li:last-child {
+      padding-bottom: 5px;
+      border-bottom: 2px solid $light-gray;
+    }
+  }
+
+  li:last-child {
+    span {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+  }
+
+  li li:hover {
+    background: $light-gray;
+    color: black;
+
+    a {
+      background: inherit;
+    }
+  }
+
+  li:last-child li {
+    text-decoration: underline;
+    color: lightblue;
+  }
+}
