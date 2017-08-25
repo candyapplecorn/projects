@@ -1,0 +1,24 @@
+<tr>
+  <td><%= req.start_date %></td>
+  <td><%= req.end_date %></td>
+  <tr>
+    <td>Requester:</td>
+    <td><%= req.requester.username %></td>
+  </tr>
+  <td>
+    <% if req.pending? && current_user_is_owner? %>
+      <form action="<%= approve_cat_rental_request_url(req) %>" method="POST">
+        <%= render 'shared/forgery' %>
+
+        <input type="submit" value="Approve" />
+      </form>
+      <form action="<%= deny_cat_rental_request_url(req) %>" method="POST">
+        <%= render 'shared/forgery' %>
+
+        <input type="submit" value="Deny" />
+      </form>
+    <% else %>
+      <%= req.status %>
+    <% end %>
+  </td>
+</tr>
