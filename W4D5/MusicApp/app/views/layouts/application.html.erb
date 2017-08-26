@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Music App</h1>
+      <%= render 'auth_manage' %>
+    </header>
+    <%= yield %>
+    <%= render 'footer' %>
+  </body>
+</html>

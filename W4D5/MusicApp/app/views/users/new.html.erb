@@ -1,0 +1,16 @@
+<h1>Sign Up</h1>
+
+<form class="" action="<%= users_url %>" method="post">
+  <%= render 'shared/forgery' %>
+
+  <label for="email">Email:</label><br>
+  <input id="email" type="text" name="user[email]" value=""><br>
+
+  <label for="name">Username:</label><br>
+  <input type="text" name="user[username]" id="name" value=""><br>
+
+  <label for="pass">Password:</label><br>
+  <input type="password" name="user[password]" id="pass" value=""><br>
+
+  <input type="submit" name="" value="Register!">
+</form>
