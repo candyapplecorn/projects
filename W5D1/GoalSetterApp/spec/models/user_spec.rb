@@ -1,7 +1,7 @@
-#require 'rails_helper'
+require 'rails_helper'
 require 'spec_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe 'User', type: :model do
   subject(:gary) { FactoryGirl.build(:user) }
   let(:mary) { FactoryGirl.build(:no_username) }
   let(:nopass) { FactoryGirl.build(:no_password) }
@@ -15,7 +15,15 @@ RSpec.describe User, type: :model do
   end
 
   it "creates a session token before validation" do
-    user.valid?
+    gary.valid?
     expect(user.session_token).to_not be_nil
+  end
+
+  describe ".find_by_credentials" do
+    before { gary.save! }
+
+    it "finds a username by credentials" do
+      expect(User.find_by_credentials(gary.username, gary.password).to eq(gary))
+    end
   end
 end
