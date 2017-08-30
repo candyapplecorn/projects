@@ -1,0 +1,17 @@
+<h1><%= @sub.title %> : Posts</h1>
+<h2><%= link_to 'New Post', new_post_url %></h3>
+
+<ol>
+  <% @posts.try(:each) do |p| %>
+    <li>
+      Title: <%= link_to p.title, post_url(p) %><br>
+      URL: <%= p.url %><br>
+      Content: <%= p.content %><br>
+      By <%= p.author.username %>
+    </li>
+    <%= button_to 'Remove Post', post_url(p), method: :delete %>
+    <%= button_to 'Edit Post', edit_post_url(p), method: :get %>
+  <% end %>
+</ol>
+
+<%= link_to 'Subs', subs_url %>

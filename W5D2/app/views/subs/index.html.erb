@@ -1,0 +1,14 @@
+<h1>Subs</h1>
+
+<h3>  <%= link_to 'New Post', new_post_url %></h3>
+
+<ol>
+  <% @subs.each do |s| %>
+    <li>
+      Title: <%= link_to s.title, sub_url(s) %><br>
+      Description: <%= s.description %><br>
+      Moderator: <%= s.moderator.username %><br>
+      # Posts: <%= s.posts.count %><br>
+    </li>
+  <% end %>
+</ol>
