@@ -1,0 +1,10 @@
+Take #4
+Mon Aug 28 13:32:44 PDT 2017
+start = 1:32
+end = 3:14
+Total = 1:42
+
+1st 8:34
+2nd 3:33
+3rd: 2:47
+4th: 1:42

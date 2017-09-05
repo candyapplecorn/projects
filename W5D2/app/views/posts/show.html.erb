@@ -1,0 +1,30 @@
+
+<header>
+  <h1><%= @post.title %> - <%= link_to @post.url, @post.url %></h1>
+  <h3>By <%= @post.author.username %></h3>
+</header>
+
+<p>
+  <%= @post.content %>
+</p>
+
+<h4>Add Comment</h4>
+<form class="" action="<%= post_comments_url(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+
+  <label>Comment
+    <input type="text" name="comment[content]" value="">
+  </label>
+
+  <input type="submit" name="" value="submit">
+</form>
+
+
+<% @post.comments.where(parent_id: nil).each do |c| %>
+  <hr>
+  <%= c.content %><br>
+  by: <%= c.author.username %><br>
+  <%= link_to 'Replies', comment_url(c) %>
+<% end %>
+
+<%= link_to 'Home', root_url %>

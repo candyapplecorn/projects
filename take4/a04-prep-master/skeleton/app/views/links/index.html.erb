@@ -1,0 +1,10 @@
+<h1>Links#index</h1>
+<p>Find me in app/views/links/index.html.erb</p>
+
+<% @links.each do |l| %>
+  Title: <%= link_to l.title, link_url(l)  %><br>
+  Url: <%= l.url %>
+  Author: <%= l.user.username %>
+<% end %>
+
+<%= link_to 'New Link', new_link_url %>

@@ -1,0 +1,13 @@
+<ul>
+  <li>
+    <%= comment.content %><br>
+    by: <%= comment.author.username %><br>
+
+
+    <%= render 'comment_reply' %>
+  </li>
+
+  <% comment.child_comments.try(:each) do |cc| %>
+    <li><%= render 'comment', comment: cc  %></li>
+  <% end %>
+</ul>
