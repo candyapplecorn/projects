@@ -1,0 +1,13 @@
+<h1>show band</h1>
+
+<%= render 'band', band: @band %>
+
+<ol>
+  <% @band.albums.each do |album| %>
+    <li><%= "Title: #{album.title}"  %> <%= link_to 'Details', album_url(album) %></li>
+  <% end %>
+</ol>
+
+<%= link_to 'Add Album', new_band_album_url(@band), method: 'GET' %>
+<%= link_to 'Edit Band', edit_band_url(@band), method: 'GET' %>
+<%= link_to 'Delete Band', band_url(@band), method: 'DELETE' %>

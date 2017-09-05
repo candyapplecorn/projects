@@ -1,0 +1,39 @@
+<% if action == :edit %>
+  <% action_url = album_url(album) %>
+<% else %>
+  <% action_url = albums_url(album) %>
+<% end %>
+
+<h1><%= action.to_s.capitalize %> Album!</h1>
+
+<form action="<%= action_url %>" method="post">
+  <% if action == :edit %>
+    <%= '<input type="hidden" name="_method" value="PATCH">'.html_safe %>
+  <% end %>
+
+  <%= render 'shared/forgery' %>
+
+  <label for="title">Album Title:</label><br>
+  <input type="text" name="album[title]" value="<%= album.title %>" id="title"><br>
+
+  <label for="islive">Live:</label>
+  <input type="radio" name="album[live]" value="true" id="islive"
+    <%= "checked" if album.live? %>
+  ><br>
+
+  <label for="isstudio">Studio:</label>
+  <input type="radio" name="album[live]" value="false" id="islive"
+    <%= "checked" unless album.live? %>
+  ><br>
+
+  <label for="year">Year:</label>
+  <input id="year" type="date" name="album[year]" value="<%= album.year %>"><br>
+
+  <select name="album[band_id]" value="">
+    <% @bands.each do |itband| %>
+      <%= "<option #{"selected" if itband.id.to_s == params[:band_id]}  value='#{itband.id}'>#{itband.name}</option>".html_safe %>
+    <% end %>
+  </input>
+
+    <input type="submit" name="" value="Submit">
+</form>

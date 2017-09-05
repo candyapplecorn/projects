@@ -1,0 +1,8 @@
+<h1>Album Details</h1>
+<h2>Title: <%= @album.title %></h3>
+<h3>Band: <%= @album.band.name %></h2>
+<h4>Year: <%= @album.year %></h4>
+<h5><%= (@album.live?) ? 'Live' : 'Studio' %></h5>
+<%= link_to "Edit Album", edit_album_url(@album), method: 'GET' %>
+<%= link_to @album.band.name, band_url(@album.band_id) %>
+<%= link_to "Delete Album", album_url(@album), method: 'DELETE' %>
