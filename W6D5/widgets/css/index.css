@@ -1,3 +1,50 @@
+.tabs {
+  background: #f752bf;
+  border: 0.5em solid black;
+	width: 600px;
+}
+
+.tabs ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+
+  border-bottom: 0.25em solid black;
+
+  padding: 0.25em;
+  padding-bottom: 0;
+
+}
+
+.tabs ul li:hover {
+	background: purple;
+	cursor: pointer;
+}
+.tabs ul li {
+  display: flex;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 15px 15px 0px 0px;
+
+  padding: 0.125em;
+  margin: calc(0.125em / 2);
+  
+
+  padding-bottom: 0;
+  margin-bottom: 0;
+
+  font-size: 2em;
+
+  box-sizing: border-box;
+}
+
+.tabs article {
+  margin: 0.5em;
+  font-size: 1.25em;
+}
+
 .clock, .weather {
   font-family: 'Ubuntu', sans-serif;
   font-size: 2em;
